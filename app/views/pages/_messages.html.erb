@@ -1,0 +1,10 @@
+<!-- Shouldn't this be universal?  -->
+
+<% [:notice, :error, :alert].each do |level| %>
+  <% unless flash[level].blank? %>
+    <div class="alert alert-<%= flash_class(level) %> fade in">
+      <a class="close" data-dismiss="alert" href="#">×</a>
+      <%= flash[level] %>
+    </div>
+  <% end %>
+<% end %>
