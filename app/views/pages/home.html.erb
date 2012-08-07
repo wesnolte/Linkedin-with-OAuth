@@ -1,2 +1,4 @@
-<h1>Welcome <%= @profile.first_name %></h1>
-<p><%= @profile.headline %></p>
+<% if logged_in? %>
+  <h1>Welcome <%= @profile.first_name %></h1>
+  <p><%= @profile.headline %></p>
+<% end %>
